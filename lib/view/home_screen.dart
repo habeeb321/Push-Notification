@@ -11,9 +11,16 @@ class HomeScreen extends StatelessWidget {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
       provider.permission();
     });
-    return const Scaffold(
+    return Scaffold(
       body: Center(
-        child: Text('Home Screen'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Last message from Firebase Messaging:',
+                style: Theme.of(context).textTheme.titleLarge),
+            Text(provider.lastMessage, style: Theme.of(context).textTheme.bodyLarge),
+          ],
+        ),
       ),
     );
   }

@@ -1,3 +1,5 @@
+import 'package:firebase_messaging/firebase_messaging.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:push_notification/controller/firebase_controller.dart';
@@ -10,6 +12,20 @@ Future<void> main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  // TODO: Define the background message handler
+  Future<void> firebaseMessagingBackgroundHandler(RemoteMessage message) async {
+    await Firebase.initializeApp();
+
+    if (kDebugMode) {
+      print("Handling a background message: ${message.messageId}");
+      print('Message data: ${message.data}');
+      print('Message notification: ${message.notification?.title}');
+      print('Message notification: ${message.notification?.body}');
+    }
+  }
+
+  FirebaseMessaging.onBackgroundMessage(firebaseMessagingBackgroundHandler);
+
   runApp(const MyApp());
 }
 
