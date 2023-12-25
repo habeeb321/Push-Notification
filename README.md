@@ -1,16 +1,28 @@
-# push_notification
+# Push Notification
 
-A new Flutter project.
+## Overview
+
+Push Notification is a Flutter project demonstrating the integration of push notifications using Firebase Cloud Messaging (FCM). This project serves as a guide on how to implement push notifications in a Flutter application for both Android and iOS platforms.
+
+## Features
+
+- Receive and display push notifications
+- Firebase Cloud Messaging (FCM) integration
+
+## Key Tools
+
+- Flutter
+- Firebase Cloud Messaging (FCM)
+- Firebase Cloud Functions (optional for serverless notifications)
+
+## Project Structure
+
+- `lib/`: Contains the main Flutter application code
+- `functions/`: Firebase Cloud Functions (optional)
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. Clone the repository:
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+git clone https://github.com/habeeb321/Push-Notification.git
